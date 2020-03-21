@@ -1,10 +1,10 @@
 public class HelperRepeatCharacter {
-    private static int maxRepetChar = 3;
+    private static int maxRepetChar = 4;
 
     public static boolean call(String input){
         if (input.length()<maxRepetChar)return false;
         else{
-            for (int i = 0; i < input.length()-maxRepetChar; i++) {
+            for (int i = 0; i < input.length()-(maxRepetChar-1); i++) {
                 if (checkRepeat(input.substring(i,i+maxRepetChar))) return true;
             }
             return false;
